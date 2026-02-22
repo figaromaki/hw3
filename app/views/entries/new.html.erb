@@ -15,6 +15,11 @@
     <label for="occurred_on">Occurred On</label>
     <input type="date" name="occurred_on">
   </p>
+
+  <!-- transfer state from the previous action to the next -->
+  <p>
+    <input type="hidden" name="place_id" value="<%= @place["id"] %>">
+  </p>
   
   <button>Submit</button>
 </form>

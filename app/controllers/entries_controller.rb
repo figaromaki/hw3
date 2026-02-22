@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
   def new
-    
+    @place = Place.find_by({ "id" => params["place_id"] })
   end
 
   def create
@@ -15,6 +15,6 @@ class EntriesController < ApplicationController
     @entry.save
 
     # redirect user
-    redirect_to "/places/#{@entry["place_id"]}"
+    redirect_to "/places/show/#{@entry["place_id"]}"
   end
 end
