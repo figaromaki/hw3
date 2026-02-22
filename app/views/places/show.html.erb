@@ -1,0 +1,11 @@
+<h1><%= @place["name"] %></h1>
+ 
+ <ul>
+   <% for entry in @entries %>
+    <li>
+      <%= entry["title"] %>, <%= entry["description"] %>, <%= entry["occurred_on"] %>
+    </li>
+   <% end %>
+</ul>
+
+<p><a href="/entries/<%= @place["id"] %>/new">New Post</a></p>
